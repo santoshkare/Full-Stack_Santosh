@@ -1,0 +1,106 @@
+:root {
+  --border: #cbd5e1;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #10b981;
+  --bg: #ffffff;
+  --striped: #f8fafc;
+  --header: #f1f5f9;
+}
+* { box-sizing: border-box }
+html, body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+.page {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+.heading {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  background: var(--header);
+  box-shadow: 0 1px 2px rgba(0,0,0,.04);
+}
+.heading h1 { margin: 0 0 6px; font-size: 20px; text-align: center }
+.heading .grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.heading .grid div {
+  padding: 4px 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+.legend {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  margin: 14px 0 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+.swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 6px;
+  border: 1px solid var(--border);
+}
+.swatch.green { background: var(--accent) }
+.table-wrap {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+.scroll { overflow: auto }
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  min-width: 1050px;
+}
+thead th {
+  position: sticky;
+  top: 0;
+  background: var(--header);
+  z-index: 2;
+}
+th, td {
+  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  padding: 10px 8px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+}
+th:first-child, td:first-child { border-left: 1px solid var(--border) }
+tbody tr:nth-child(even) td { background: var(--striped) }
+.day {
+  font-weight: 700;
+  width: 120px;
+  background: #fafafa;
+}
+.slot { min-width: 100px }
+.course { line-height: 1.2 }
+.course .code { font-weight: 700 }
+.course .group { color: var(--muted); font-size: 12px }
+.highlight { background: var(--accent)!important; color: #063b2d; font-weight: 700 }
+.merge { font-weight: 700 }
+@media print {
+  .page { max-width: none; margin: 0; padding: 0 }
+  .heading, .legend { break-inside: avoid }
+  .table-wrap { box-shadow: none }
+  thead th { position: static }
+}
