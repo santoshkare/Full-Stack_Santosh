@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User API Example</title>
+</head>
+<body style="text-align:center; font-family:Arial; margin-top:40px; background-color:#e6f7ff;">
+  
+  <h2>Fetch Random User Data using API</h2>
+  <button onclick="getUser()" style="padding:8px 15px; border-radius:10px; background-color:#007BFF; color:white; border:none; cursor:pointer;">Show Random User</button>
+  
+  <p id="loading" style="display:none; color:orange;"></p>
+  <div id="result" style="margin-top:20px;"></div>
+
+  <script>
+    async function getUser() {
+      document.getElementById("loading").style.display = "block";
+      document.getElementById("result").innerHTML = "";
+
+      const url = "https://jsonplaceholder.typicode.com/users";
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const randomUser = data[Math.floor(Math.random() * data.length)];
+
+      document.getElementById("loading").style.display = "none";
+
+      document.getElementById("result").innerHTML = `
+        <h3>${randomUser.name}</h3>
+        <p><b>Username:</b> ${randomUser.username}</p>
+        <p><b>Email:</b> ${randomUser.email}</p>
+        <p><b>City:</b> ${randomUser.address.city}</p>
+        <p><b>Company:</b> ${randomUser.company.name}</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
