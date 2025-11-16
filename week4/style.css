@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120px;
+  animation: launch 5s infinite alternate;
+}
+
+@keyframes launch {
+  0% { bottom: 20; }
+  100% { bottom: 80%; }
+}
+
+.astronaut {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 100px;
+  animation: float 4s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}
+
+.nav-link {
+  color: white !important;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background: #ff9800;
+  color: black !important;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.carousel img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  margin-top: 50px;
+}

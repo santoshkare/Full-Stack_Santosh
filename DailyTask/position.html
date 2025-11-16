@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title>Position</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 1px;
+      }
+      .container{
+       width: 100%;
+       height: 400px;
+       background-color: antiquewhite;
+       border: 2px solid black;
+       margin: 20px auto;
+      }
+      .box{
+        width: 150px;
+        height: 150px;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute  ;
+      }
+      .box1{
+        background-color: red;
+        top: 50px;
+        left: 50px;
+        z-index:1;;
+
+      }
+      .box2{
+        background-color: royalblue;
+        top: 100px;
+        left: 100px;
+        z-index: 2;
+        
+      }
+      .box3{
+        background-color: seagreen;
+        top:150px;
+        left: 150px;
+        z-index: 3;
+      }
+    </style>
+    <body>
+      <div class="container">
+      
+        <div class="box1 box">BOX1</div>
+        <div class="box2 box">BOX2</div>
+        <div class="box3 box">BOX3</div>
+      
+      </div>
+    </body>
+  </head>
+</html>

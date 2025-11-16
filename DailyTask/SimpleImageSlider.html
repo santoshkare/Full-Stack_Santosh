@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pure CSS Image Slider</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+
+    .slider {
+      width: 80%;
+      max-width: 600px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    }
+
+    .slides {
+      display: flex;
+      width: 500%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slides img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Hide default radio buttons */
+    input[type="radio"] {
+      display: none;
+    }
+
+    /* Dots navigation */
+    .navigation {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+    }
+
+    .bar {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #bbb;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input:checked + .bar {
+      background: #3498db;
+    }
+
+    /* Slide positioning */
+    #slide1:checked ~ .slides { transform: translateX(0%); }
+    #slide2:checked ~ .slides { transform: translateX(-100%); }
+    #slide3:checked ~ .slides { transform: translateX(-200%); }
+  </style>
+</head>
+<body>
+  <div class="slider">
+    <!-- Radio buttons -->
+    <input type="radio" name="radio-btn" id="slide1" checked>
+    <input type="radio" name="radio-btn" id="slide2">
+    <input type="radio" name="radio-btn" id="slide3">
+
+    <!-- Slides -->
+    <div class="slides">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Image 1">
+      <img src="https://picsum.photos/id/1016/600/400" alt="Image 2">
+      <img src="https://picsum.photos/id/1018/600/400" alt="Image 3">
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="navigation">
+      <label for="slide1" class="bar"></label>
+      <label for="slide2" class="bar"></label>
+      <label for="slide3" class="bar"></label>
+    </div>
+  </div>
+</body>
+</html>
