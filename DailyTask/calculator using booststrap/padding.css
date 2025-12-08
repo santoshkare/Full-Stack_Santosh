@@ -1,0 +1,21 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+  background-color: rgb(240, 240, 240);
+} 
+.display{
+  width: 40vh;
+  height: 30px;
+  background-color: rgb(200, 200, 200);
+  padding: 10px;
+  margin-left: 50px;
+  border-radius: 10px;
+}
+.btn{
+  justify-content: center;
+  padding: 10px;
+  margin: 40px;
+}

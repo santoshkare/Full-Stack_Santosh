@@ -1,0 +1,64 @@
+*{
+  padding: 0%;
+  margin: 0%;
+}
+body{
+  background-color: rgb(226, 224, 236);
+  
+}
+h1{
+  text-align: center;
+}
+.first {
+  padding: 30px;
+  background-color: aqua;
+  color: rgb(16, 15, 17);
+}
+
+.bigW {
+  font-size: 40px;   
+  font-weight: bold; 
+  color: rgb(240, 26, 6); 
+}
+
+
+.second{
+  padding: 30px 30px;
+  height: 30px;
+  color: rgb(15, 147, 15);
+  text-align: center;
+  block-size: 20px;
+  text-decoration: underline;
+}
+
+
+#movie{
+  padding: 40px;
+  text-align: center;
+  font-weight: 800;
+  text-decoration: underline;
+}
+#list{
+  padding-left: 100px;
+  color: red;
+}
+.fourth{
+  text-decoration: underline;
+}
+#cities{
+   padding: 30px 90px 10px;
+   text-align: center;
+
+}
+.citi{
+  padding-left: 50px;
+  margin: 10px 0;
+  border: 2px dashed teal;
+  border-radius: 9px;
+  background-color: rgb(196, 183, 208);
+}
+hr {
+  height: 5px;           
+  background-color: black; 
+  border: none;          
+}

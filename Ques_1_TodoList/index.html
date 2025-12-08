@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+    <h2>TO-DO-List</h2>
+
+    <!-- Add Task -->
+    <input id="taskInput" type="text" placeholder="Enter task">
+    <button id="addBtn">Add Task</button>
+
+    <!-- Filters -->
+    <div class="filters">
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="completed">Completed</button>
+        <button data-filter="pending">Pending</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
